@@ -50,6 +50,7 @@ ENV WRANGLER_SEND_METRICS=false \
     VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
     DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX}\
     RUNNING_IN_DOCKER=true
+    __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS=${ALLOWED_HOSTS}
 
 # Pre-configure wrangler to disable metrics
 RUN mkdir -p /root/.config/.wrangler && \
