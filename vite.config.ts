@@ -139,6 +139,10 @@ export default defineConfig((config) => {
       'LMSTUDIO_API_BASE_URL',
       'TOGETHER_API_BASE_URL',
     ],
+    server: {
+      // Allow the host name from your docker-compose network
+      allowedHosts: ['frontend_web']
+    },
     css: {
       preprocessorOptions: {
         scss: {
