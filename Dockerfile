@@ -55,7 +55,9 @@ ENV WRANGLER_SEND_METRICS=false \
 RUN mkdir -p /root/.config/.wrangler && \
     echo '{"enabled":false}' > /root/.config/.wrangler/metrics.json
 
-RUN node --max-old-space-size=4096 node_modules/.bin/pnpm run build
+ENV NODE_OPTIONS="--max-old-space-size=8192"
+
+RUN pnpm run build
 
 CMD [ "pnpm", "run", "dockerstart"]
 
