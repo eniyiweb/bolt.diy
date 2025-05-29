@@ -140,8 +140,11 @@ export default defineConfig((config) => {
       'TOGETHER_API_BASE_URL',
     ],
     server: {
-      // Allow the host name from your docker-compose network
-      allowedHosts: ['bolt.myvps.tr']
+      host: true,
+      allowedHosts: [
+        'localhost',
+        'bolt.myvps.tr',
+      ]
     },
     css: {
       preprocessorOptions: {
