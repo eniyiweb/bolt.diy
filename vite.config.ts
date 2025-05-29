@@ -141,7 +141,7 @@ export default defineConfig((config) => {
     ],
     server: {
       // Allow the host name from your docker-compose network
-      allowedHosts: ['frontend_web']
+      allowedHosts: ['bolt.myvps.tr']
     },
     css: {
       preprocessorOptions: {
